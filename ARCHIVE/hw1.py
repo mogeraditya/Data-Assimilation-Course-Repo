@@ -11,7 +11,7 @@ def compute_x_hat(y_means, y_var):
     sig= np.sqrt(1/x_hat_denom)
     return x_hat, sig
 
-#part (a), (b); fix sigma2 and vary y2 and vice versa
+#part (a), (b), (c); fix sigma2 and vary y2 and vice versa
 fixed_sig_2= 2.0
 varied_y2_arr= np.arange(-5, 5.5, 0.5)
 store_x_hat_varied_y2=[]
@@ -37,7 +37,7 @@ for sig2 in varied_sig2_arr:
 # plt.plot(varied_y2_arr, store_x_hat_varied_y2)
 # plt.show()
 
-#generate data for 3d plot
+#part (c); generate data for 3d plot
 fig = plt.figure()#figsize = (10, 7))
 ax = plt.axes(projection ="3d")
 
@@ -64,8 +64,6 @@ for sig2 in varied_sig2_arr:
         fix_sig2_arr.append(x_hat)
     ax.plot(varied_y2_arr, fix_sig2_arr, zs= -5, zdir='y', label='curve in (x, y)')
 
-# ax.scatter(X, Z, zs= -5, zdir='y', label='curve in (x, y)')
-# ax.scatter(Y, Z, zs= -5, zdir='x', label='curve in (x, y)')
 ax.scatter3D(X, Y, Z, color = "green")
 ax.set_xlabel('Y2')
 ax.set_ylabel('sig2^2')
@@ -73,6 +71,6 @@ ax.set_zlabel('X_hat')
 plt.title("")
 plt.show()
 
-
+#part (d)
 
 
