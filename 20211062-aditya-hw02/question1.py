@@ -85,7 +85,7 @@ for rho in range_of_rhos:
     plt.contour(xg, yg, npdf)
     plt.title("plot of join and conditional for rho=" +str(rho))
     plt.legend()
-    os.chdir("D:\\github\\Data-Assimilation-Course-Repo\\hw2\\plots\\")
+    os.chdir("D:\\github\\Data-Assimilation-Course-Repo\\20211062-aditya-hw02\\plots\\")
     plt.savefig("joint_conditional_marginal_rho="+str(rho)+".png")
     plt.clf()
 
